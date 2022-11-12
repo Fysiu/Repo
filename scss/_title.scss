@@ -1,0 +1,37 @@
+.header-title {
+    height: 100%;
+    font-size: 4rem;
+    padding-top: 0vh;
+    padding-bottom: 1vh;
+    align-items: center;
+    text-align: left;
+    
+
+    &_the{
+        color: $text-color;
+        font-weight: 600;
+    }
+
+    &_name {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 3vw;
+        color:  $secondary-color;
+        font-weight: 700;
+    }
+
+    @include mobile {
+        font-size: 3rem;
+    }
+}
+
+.autor{
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    @include mobile {
+        font-size: 0.9rem;
+    }
+}
+

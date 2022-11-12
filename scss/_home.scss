@@ -1,0 +1,240 @@
+.home {
+    height: auto;
+    padding-top: 40vh;
+    overflow-x: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.4),
+        rgba($primary-color, 0.3),
+    ),
+    url('../img/img2.jpg') center top;
+    background-size: cover;
+
+    &_blocks{
+       font-size: 30px;
+        color: $text-color;
+
+       &-big{
+        font-weight: 400;
+        display: block;
+        background: rgba($primary-color, 0.9);
+        box-shadow:  57px 50px 20px 20px rgba($secondary-color, 0.7);
+        width: 61vw;
+        height: 45vh;
+        margin: auto;
+        margin-top: -7%;
+        @include borderWhite;
+
+        @include mobile{
+            margin-top: -30%;
+        }
+           
+        &_title {
+           font-weight: 600;
+           font-size: 45px;
+           padding: 0.1rem;
+           color: $secondary-color;
+        }
+
+
+         //Ranking
+        &_table{
+            border: 1px;
+            width: 38vw;
+            margin: auto;
+            overflow-y: scroll;
+            height: 35vh;
+
+            th{
+                padding-left: 2vw;
+            }
+            &-tab{
+                border-spacing: 0px;
+                
+
+                td{
+                    border: 5px solid rgba($primary-color, 0);
+                }
+                 thead{
+                    background-color: rgba($primary-color, 0.9);
+                    th{
+                        border: 5px solid rgba($primary-color, 0.9);
+                    }
+                 }
+
+                 #place1{
+                    background-color: rgba(goldenrod, 0.8);
+                 }
+
+                 #place2{
+                    background-color: rgba(silver, 0.5);
+                 }
+
+                 #place3{
+                    background-color: rgba(#4E3005, 0.3);
+                 }
+
+                tbody[row]:hover {
+
+                   #place1, #place2, #place3 {
+                    background-color: greenyellow;
+                   }
+
+                    background-color: greenyellow;
+                    color: black;
+                    td{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: none;
+                        border-right: none;
+                    }
+                    #left-side-row-end{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: 5px solid greenyellow;
+                        border-right: none;
+                        font-size: 25px;
+
+                        @include mobile{
+                            font-size: 15px;
+                        }
+                    }
+                    #right-side-row-end{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: none;
+                        border-right: 5px solid greenyellow;         
+                    }
+
+                    }
+                }
+
+            @include mobile { 
+                overflow-x: scroll;
+                font-size: 20px;
+            }
+        }
+       }
+
+
+       //małę bloczki
+       &-small{
+       @include flexBlocks;
+        width: 70%;
+        margin: auto;
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        
+
+        @include mobile2 {
+            flex-direction: column;
+            margin-left: 15%;
+        }
+        
+        
+        &_title{
+           font-weight: 600;
+           font-size: 35px;
+           padding: 0.3rem;
+           color: $secondary-color;
+           
+           @include mobile2 {
+            font-size: 25px;
+        }
+        }
+
+        //Wszyszukiwarka
+        &_one{
+            background-color: rgba($primary-color, 0.9);
+            box-shadow:  40px 40px 20px 20px rgba($secondary-color, 0.7);
+            height: 26vh;
+            width: 20vw;
+            padding: 1rem;
+            @include borderWhite;
+
+            @include mobile2 {
+                width: 40vw;
+                height: 18vh;
+            }
+
+            &-form{
+                font-size: 20px;
+                font-weight: 600;
+                justify-content: center;
+                align-items: center;
+                @include mobile2 {
+                    font-size: 15px;
+                }
+                
+                &-text{
+                    font-size: 25px;
+
+                    @include mobile2 {
+                        font-size: 20px;
+                    }
+                }
+
+                &-input{
+                    width: 10vw;
+                    height: 2.5vh;
+                    font-size: 15px;
+                    color: $secondary-color;
+                    margin: 0.5rem;
+                    font-weight: 600;
+                    border-radius: 5px;
+
+                    @include mobile2 {
+                        width: 18vw;
+                        height: 1.7vh;
+                        font-size: 13px;
+
+                    }
+                }
+
+            }
+
+            &-btn{
+                width: 120px;
+                height: 40px;
+                font-size: 17px;
+                background-color: $secondary-color;
+                color: $text-color;
+                font-weight: 600;
+                margin-top: 1rem;
+                border-radius: 5px;
+
+                @include mobile {
+                font-size: 12px;
+                width: 100px;
+                height: 32px;
+
+                }
+            }
+
+        }
+        
+        //Ogolne statyski
+        &_two{
+            background-color: rgba($primary-color, 0.9);
+            box-shadow:  40px 40px 20px 20px rgba($secondary-color, 0.7);
+            margin-left: 16vw;
+            width: 20vw;
+            padding: 1rem;
+            @include borderWhite;
+            
+         
+            @include mobile2 {
+                margin-top: 2vh;
+                margin-left: 0;
+                width: 45vw;
+            }
+
+        }
+
+       }
+    }
+  }

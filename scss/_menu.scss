@@ -1,0 +1,145 @@
+.menu-button {
+    position: absolute;
+    z-index: 1;
+    right: 3rem;
+    top: 2.5rem;
+    height: 30px;
+    width: 38px;
+    cursor: pointer;
+    @include transition-ease;
+    @include mobile {
+        right: 1rem;
+        top: 1.5rem;
+        height: 25px;
+        width: 28px;
+    }
+
+
+    &_burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 45px;
+        height: 3.5px;
+        background: set-text-color($primary-color);
+         @include transition-ease;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            width: 45px;
+            height: 3.5px;
+            background-color: set-text-color($primary-color);
+            @include transition-ease;
+            @include mobile {
+                width: 40px;
+            }
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            width: 45px;
+            height: 3.5px;
+            background-color: set-text-color($primary-color);
+            @include transition-ease;
+            @include mobile {
+                width: 40px;
+            }
+         }
+
+         &.open {
+             transform: rotate(540deg);
+             background: transparent; 
+
+             &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+             }
+
+             &::after {
+                transform: rotate(-45deg) translate(4px, -8px);
+             }
+         }
+         @include mobile {
+            width: 40px;
+        }
+    }
+}
+
+
+.navM {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    opacity: 0.98;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+    }
+
+    .navM-menu {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background: rgba($primary-color, 0.99);//rgba(0,0,0,0.5);
+        list-style-type: none;
+        transform: translateY(-100vh);
+        padding-right: 1rem;
+        @include transition-ease;
+        
+        
+
+
+        &.open {
+            transform: translateY(0);
+        }
+
+        &_item {
+            transform: translateX(100vw);
+            @include transition-ease;
+
+            &.open {
+                transform: translateX(0);
+            }
+
+            &.active > a {
+                color: $secondary-color;
+            }
+
+            &-watch {
+                font-size: 2rem;
+            }
+        }
+
+        &_link {
+            display: inline-block;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 400;
+            @include transition-ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    @include mobile{
+           width: 100vw;
+           background: rgba($primary-color, 0.7);
+
+    }
+}
+
+@for $i from 1 through 5 {
+    .navM-menu_item:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}

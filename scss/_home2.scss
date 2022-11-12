@@ -1,0 +1,50 @@
+.home2 {
+    height: auto;
+    padding-top: 40vh;
+    overflow-x: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.4),
+        rgba($primary-color, 0.3),
+    ),
+    url('../img/img2.jpg') center top;
+    background-size: cover;
+
+    &_block{
+       font-size: 30px;
+        color: $text-color;
+        margin-bottom: 10%;
+       &-description{
+        font-weight: 400;
+        display: block;
+        background: rgba($primary-color, 0.9);
+        box-shadow:  55px 56px 20px 20px rgba($secondary-color, 0.7);
+        width: 70vw;
+        height: 70vh;
+        margin: auto;
+        margin-top: -7%;
+        @include borderWhite;
+
+        @include mobile{
+            margin-top: -30%;
+        }
+           
+        &_title {
+           font-weight: 600;
+           font-size: 45px;
+           padding-top: 1.5rem;
+           color: $secondary-color;
+
+        }
+
+        &-text{
+            margin: auto;
+            padding: 2.5rem;
+        }
+
+    }
+  }
+}

@@ -1,0 +1,57 @@
+//ciemny motyw
+$primary-color: #272727;
+$secondary-color: #180d2f;
+$text-color: #ffffff;
+$border-color: #272727;
+
+//jasny motyw
+/*$primary-color: #f2f4f3;
+$secondary-color: #b14aed;
+$text-color: #000000;
+$border-color: #f2f4f3;*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+@mixin borderWhite {
+    border-bottom: 2px solid set-text-color($border-color);
+    border-top: 2px solid set-text-color($border-color);
+    border-radius: 25px;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color){
+    @if (lightness($color) > 40%){
+        @return black;
+    } @else {
+      @return white;
+    }
+}
+
+@mixin flexBlocks(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$mobile: 1000px;
+@mixin mobile {
+    @media (max-width: $mobile){
+        @content;
+    }  
+}
+
+@mixin mobile2 {
+    @media (max-width: 1200px){
+        @content;
+    }  
+}
+

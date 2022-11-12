@@ -1,0 +1,124 @@
+.ranking {
+    height: auto;
+    padding-top: 40vh;
+    overflow-x: hidden;
+    align-items: center;
+    text-align: center;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.4),
+        rgba($primary-color, 0.3),
+    ),
+    url('../img/img2.jpg') center top;
+    background-size: cover;
+
+    &_block{
+       font-size: 30px;
+        color: $text-color;
+        font-weight: 400;
+        display: block;
+        background: rgba($primary-color, 0.9);
+        box-shadow:  50px 50px 20px 20px rgba($secondary-color, 0.7);
+        width: 65vw;
+        height: 60vh;
+        margin: auto;
+        margin-top: -6%;
+        margin-bottom: 10%;
+        @include borderWhite;
+
+        @include mobile{
+            margin-top: -30%;
+            margin-bottom: 22%
+        }
+           
+        &_title {
+           font-weight: 600;
+           font-size: 45px;
+           padding: 0.3rem;
+           color: $secondary-color;
+        }
+
+
+         //Ranking
+        &_table{
+            border: 1px;
+            width: 60vw;
+            margin: auto;
+            overflow-y: scroll;
+            height: 45vh;
+
+            th{
+                padding-left: 2vw;
+            }
+            &-tab{
+                border-spacing: 0px;
+                
+
+                td{
+                    border: 5px solid rgba($primary-color, 0);
+                }
+                 thead{
+                    background-color: rgba($primary-color, 0.9);
+                    th{
+                        border: 5px solid rgba($primary-color, 0.9);
+                    }
+                 }
+
+
+                 #place1{
+                    background-color: rgba(goldenrod, 0.8);
+                 }
+
+                 #place2{
+                    background-color: rgba(silver, 0.5);
+                 }
+
+                 #place3{
+                    background-color: rgba(#4E3005, 0.3);
+                 }
+
+
+                tbody[row]:hover {
+
+                    background-color: greenyellow;
+                    color: black;
+
+                    #place1, #place2, #place3 {
+                        background-color: greenyellow;
+                       }
+                       
+                    td{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: none;
+                        border-right: none;
+                    }
+                    #left-side-row-end{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: 5px solid greenyellow;
+                        border-right: none;
+                        font-size: 25px;
+
+                        @include mobile{
+                            font-size: 15px;
+                        }
+                    }
+                    #right-side-row-end{
+                        border-top: 5px solid greenyellow;
+                        border-bottom: 5px solid greenyellow;
+                        border-left: none;
+                        border-right: 5px solid greenyellow;        
+                    }
+
+                    }
+                }
+
+            @include mobile { 
+                overflow-x: scroll;
+                font-size: 20px;
+            }
+        }
+    }
+  }

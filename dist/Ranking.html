@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ranking</title>
+</head>
+<body onload="zegar()">
+
+    <header>
+        <h1 class="header-title">
+            <span class="header-title_name" id="title1"><span class="header-title_the">Ranking</span> SD Project</span>
+            <span class="header-title_name" id="title2"><span class="header-title_the">Ranking</span> Sensory Dungeon Project<span>
+          </h1>
+        <div class="menu-button">
+           <span class="menu-button_burger"></span>
+        </div>
+        <nav class="navM">
+            <ul class="navM-menu">
+                <li class="navM-menu_item ">
+                    <div class="navM-menu_item-watch" id="zegar"></div>
+                </li>
+                <li class="navM-menu_item">
+                    <a href="index.html" class="navM-menu_link">
+                        Strona główna
+                    </a>
+                <li class="navM-menu_item">
+                    <a href="podstrona_1.html" class="navM-menu_link">
+                        O projekcie SD
+                    </a>
+                </li>
+                <li class="navM-menu_item active">
+                    <a href=" " class="navM-menu_link">
+                        Ranking
+                    </a>
+                </li>
+                <li class="navM-menu_item">
+                    <a href="https://www.youtube.com/watch?v=_a5j7KoflTs" target="_blank" class="navM-menu_link">
+                        Podstrona 3 "Link na filmiku"
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <main>
+        <section class="ranking">
+            <div class="ranking_block">
+                   <h2 class="ranking_block_title">Ranking</h2>
+                   <div class="ranking_block_table">
+                    <table class="ranking_block_table-tab">
+                        <thead>
+                         <tr>
+                            <th>#</th>
+                            <th>Nazwa</th>
+                            <th>Punkty</th>
+                            <th>Punkty</th>
+                            <th>Punkty</th>
+                            <th>Punkty</th>
+                            <th>Punkty</th>
+                            <th>Suma Punktów</th>
+                          </tr>
+                        </thead>
+                        <tbody row> 
+                          <tr id="place1">
+                            <th id="left-side-row-end">1</th>
+                            <td>Mark</td>
+                            <td>6</td>
+                            <td>12</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td id="right-side-row-end">18</td>
+                          </tr>
+                        </tbody>
+                        <tbody row>
+                          <tr id="place2">
+                            <th id="left-side-row-end">2</th>
+                            <td>Jacob</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td id="right-side-row-end">16</td>
+                          </tr>
+                        </tbody>
+                        <tbody row>
+                          <tr id="place3">
+                            <th id="left-side-row-end">3</th>
+                            <td>Franek</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td id="right-side-row-end">15</td>
+                          </tr>
+                        </tbody>
+                        <script>
+                          //generowanie tabeli
+                          for(var i = 4; i <14; i++){
+                                var c = Math.floor(Math.random() * 10);
+
+                                document.write("<tbody row><tr>")
+                                document.write('<th id="left-side-row-end">' + i +'</th>');
+                                document.write('<td>Stefan</td><td>3</td><td>8</td><td>0</td><td>0</td><td>0</td><td id="right-side-row-end">11</td>');
+                                document.write('</tr></tbody>');
+                                   };
+
+                        </script>
+                      </table>
+                   </div>
+            </div>
+          
+            <footer>
+              <div>
+                &copy; Copyright 2022
+              </div>
+              <div class="footer_text">
+                By Filip
+              </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
