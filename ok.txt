@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Człowieku
+=======
+Witaj
+>>>>>>> develop
